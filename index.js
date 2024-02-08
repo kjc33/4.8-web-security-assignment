@@ -1,4 +1,5 @@
 const express = require('express');
+require("dotenv").config();
 const { testConnection } = require('./db/conn');
 const { authenticateJWT } = require('./middlewares/authMiddleware');
 
