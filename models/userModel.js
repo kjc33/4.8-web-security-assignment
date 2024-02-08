@@ -1,4 +1,4 @@
-const { sequelize } = require("../db/conn");
+const sequelize = require("../db/db");
 const { DataTypes } = require("sequelize");
 
 // Define the "User" Model
@@ -39,7 +39,6 @@ const User = sequelize.define(
   }
 );
 
-// Create the Table
-User.sync();
+sequelize.sync();
 
 module.exports = { User };

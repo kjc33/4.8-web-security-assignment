@@ -1,6 +1,6 @@
 const { Sequelize } = require("sequelize");
 
-const sequelize = new Sequelize(process.env.POSTGRESQL_DATABASE);
+const sequelize = new Sequelize("sqlite::memory");
 
 // Test Connection Function
 async function testConnection() {
