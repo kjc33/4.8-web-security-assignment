@@ -8,10 +8,9 @@ const PORT = 8080;
 testConnection();
 app.use(express.json());
 
-app.get("/health"),
-  (req, res) => {
-    res.send("OK");
-  };
+app.get("/health", (req, res) => {
+  res.send("OK");
+});
 
 app.get("/protected", authenticateJWT, (req, res) => {
   res.send("This is a protected route.");
